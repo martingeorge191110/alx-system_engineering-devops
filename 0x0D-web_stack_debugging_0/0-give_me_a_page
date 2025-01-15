@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# run on the container and to return a page containing Hello ALX when querying the root of it.
+
+service apache2 start
