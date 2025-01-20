@@ -9,8 +9,8 @@ TXT="frontend lb-01
 backend webservers
    mode http
    balance roundrobin
-   server 361866-web-01 34.239.255.114:80
-   server 361866-web-02 3.83.253.172:80"
+   server 361866-web-01 34.224.6.206:80
+   server 361866-web-02 34.201.161.84:80"
 
 sudo apt-get -y update
 sudo apt-get -y install haproxy
