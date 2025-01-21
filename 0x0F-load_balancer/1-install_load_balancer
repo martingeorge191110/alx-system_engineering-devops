@@ -21,7 +21,7 @@ backend webservers
     mode http
     balance roundrobin
     server 806605-web-01 34.224.6.206:80 check
-    server 806605-web-02 34.201.161.84:80 cehck
-" >> /etc/haproxy/haproxy.cfg
+    server 806605-web-02 34.201.161.84:80 check
+" | sudo tee /etc/haproxy/haproxy.cfg > /dev/null
 
 sudo service haproxy restart
