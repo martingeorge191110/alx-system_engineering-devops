@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """Python script that, using this REST API"""
+import json
 import requests
 from sys import argv
-import json
 
 
 def api_response(api, id):
