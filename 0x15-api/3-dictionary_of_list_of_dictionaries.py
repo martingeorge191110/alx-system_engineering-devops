@@ -11,7 +11,7 @@ def api_response(api):
     for ele in users_api:
         id = ele['id']
         username = ele['username']
-        tasks_api = f"{api}users/{id}/todos"
+        tasks_api = f"{api}/users/{id}/todos"
         all_tasks = requests.get(tasks_api).json()
 
         all_users[id] = []
