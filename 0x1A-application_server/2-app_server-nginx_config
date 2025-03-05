@@ -1,0 +1,25 @@
+# configure Nginx to serve your page from the route /airbnb-onepage/
+
+server {
+    # Listen on port 80
+    listen      80 default_server;
+    listen      [::]:80 default_server ipv6only=on;
+
+    # Use ip addres as the domain name
+    server_name 34.224.6.206;
+
+    # Customize response header
+    add_header  X-Served-By 806605-web-01;
+
+    # Serve /airbnb-onepage/ route from airbnb version 2
+    location = /airbnb-onepage/ {
+        proxy_pass http://127.0.0.1:5000/airbnb-onepage/;
+    }
+
+    # 404 error page
+    error_page 404 /404.html;
+    location /404 {
+        root /var/www/html;
+        internal;
+    }
+}
