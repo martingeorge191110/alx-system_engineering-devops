@@ -6,5 +6,5 @@ exec { 'increase':
 
 exec {'start-nginx-server':
     provider => shell,
-    command => 'service nginx restart'
+    command  => 'service nginx restart'
 }
